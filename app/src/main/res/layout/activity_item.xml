@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ItemActivity"
+    android:id="@+id/itemActivity">
+    <ImageView
+        android:id="@+id/imageID"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:src="@drawable/nuggets"
+        />
+    <TextView
+        android:id="@+id/nameID"
+        android:textColor="#f45d0b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:layout_below="@+id/imageID"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionID"
+        android:textColor="#ffff"
+        android:text="description"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/nameID"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/priceRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descriptionID"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp">
+        <TextView
+            android:id="@+id/priceID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price"
+            android:textColorHighlight="#f45d0b"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:textColor="#ffff"
+            />
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" EGP"
+            android:textColorHighlight="#f45d0b"
+            android:textSize="35dp"
+            android:textColor="#ffff"
+            android:layout_toRightOf="@+id/priceID"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/numberRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/priceRL"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"
+        android:paddingBottom="50dp">
+
+        <Button
+            android:id="@+id/decrement"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:text="-"
+            android:textColor="#f45d0b"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/numberOfMeals"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_toRightOf="@+id/decrement"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#f45d0b"
+            android:textStyle="bold"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/increment"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/numberOfMeals"
+            android:backgroundTint="@color/white"
+            android:text="+"
+            android:textColor="#f45d0b"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/addToCart"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:background="#f45d0b"
+        android:layout_below="@id/numberRL"
+        android:layout_centerHorizontal="true"
+        android:text="Add To Cart"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        />
+
+
+
+</RelativeLayout>
